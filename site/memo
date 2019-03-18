@@ -1,0 +1,73 @@
+커뮤니티 사이트 프로그램
+
+
+<구현기능>
+
+1. 회원가입 2.로그인 
+
+
+2.로그인 -> 1. 내정보수정하기 2. 글쓰기 3.회원탈퇴 4.로그아웃
+
+
+
+1.회원가입
+	이름 아이디 비밀번호 
+	
+	MemberAction
+	
+	
+2. 회원정보 수정 = Modify 
+
+3. 글쓰기 = Write
+
+4. 회원탈퇴 = drop out
+
+5. 프로그램 종
+
+
+
+
+
+User  미로그인
+
+Member 로그인
+
+admin 관리자 
+
+https://wayhome25.github.io/mysql/2017/03/20/mysql-05-table-insert-delete-modify/
+
+
+create database site;
+use site;
+
+show databases;
+show tables;
+
+create table MemberTable(
+Id_Num int not null primary key auto_increment,
+Id varchar(15) not null,
+Pass varchar(20) not null,
+NickName varchar(10) not null,
+Name varchar(20) not null,
+Email varchar(30) not null,
+PhoneNum int (30) not null);
+
+create table AdminTable(
+Id_Num int not null primary key auto_increment,
+Id varchar(15) not null,
+pass varchar(20) not null,
+NickName varchar(10) not null);
+
+create table board(
+board_Num int not null Primary key auto_increment,
+contents varchar(1000) not null);
+
+select * from AdminTable;
+select * from MemberTable;
+
+insert into AdminTable value('1','admin','1234','관리자');
+
+
+
+	
+
